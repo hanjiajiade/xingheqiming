@@ -1,0 +1,345 @@
+<!DOCTYPE html>
+
+<html class="dark" lang="zh-CN"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>星河启明 - 星河入梦</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;600;700&amp;family=JetBrains+Mono:wght@500&amp;family=Be+Vietnam+Pro:wght@400&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "deep-void": "#050714",
+                      "on-primary-container": "#8384ba",
+                      "lunar-glow": "#E2E8F0",
+                      "starlight-white": "#F8F9FF",
+                      "error-container": "#93000a",
+                      "surface-container-highest": "#2f334e",
+                      "background": "#0d112a",
+                      "on-error-container": "#ffdad6",
+                      "surface-dim": "#0d112a",
+                      "on-secondary-fixed": "#221b00",
+                      "secondary-container": "#ffdb3c",
+                      "surface-container-high": "#242842",
+                      "surface-variant": "#2f334e",
+                      "primary-fixed": "#e1e0ff",
+                      "primary-container": "#1a1b4b",
+                      "on-surface": "#dee0ff",
+                      "surface": "#0d112a",
+                      "on-tertiary-fixed-variant": "#004883",
+                      "on-secondary": "#3a3000",
+                      "on-primary-fixed": "#141545",
+                      "on-secondary-fixed-variant": "#544600",
+                      "inverse-surface": "#dee0ff",
+                      "tertiary-container": "#002142",
+                      "primary": "#c1c1fc",
+                      "outline": "#918f9a",
+                      "surface-container-lowest": "#080c25",
+                      "inverse-primary": "#585a8d",
+                      "tertiary-fixed": "#d4e3ff",
+                      "inverse-on-surface": "#2b2f49",
+                      "on-tertiary-container": "#438adc",
+                      "on-tertiary-fixed": "#001c39",
+                      "primary-fixed-dim": "#c1c1fc",
+                      "on-background": "#dee0ff",
+                      "surface-container-low": "#161a33",
+                      "outline-variant": "#46464f",
+                      "on-error": "#690005",
+                      "nebula-gray": "#94A3B8",
+                      "secondary": "#fff9ef",
+                      "on-tertiary": "#00315d",
+                      "surface-bright": "#343752",
+                      "surface-container": "#1a1e37",
+                      "on-secondary-container": "#725f00",
+                      "surface-tint": "#c1c1fc",
+                      "secondary-fixed-dim": "#e9c400",
+                      "secondary-fixed": "#ffe16d",
+                      "tertiary": "#a4c9ff",
+                      "tertiary-fixed-dim": "#a4c9ff",
+                      "on-primary-fixed-variant": "#404273",
+                      "error": "#ffb4ab",
+                      "on-surface-variant": "#c8c5d0",
+                      "on-primary": "#2a2b5b",
+                      "solar-flare": "#FFA500"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "margin-desktop": "40px",
+                      "panel-width-ai": "320px",
+                      "panel-width-side": "280px",
+                      "unit": "8px",
+                      "margin-mobile": "16px",
+                      "gutter": "24px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Space Grotesk"
+                      ],
+                      "headline-xl": [
+                              "Space Grotesk"
+                      ],
+                      "label-md": [
+                              "JetBrains Mono"
+                      ],
+                      "headline-lg-mobile": [
+                              "Space Grotesk"
+                      ],
+                      "headline-lg": [
+                              "Space Grotesk"
+                      ],
+                      "body-lg": [
+                              "Be Vietnam Pro"
+                      ],
+                      "body-md": [
+                              "Be Vietnam Pro"
+                      ]
+              }
+            },
+          },
+        }
+      </script>
+<style>
+        body {
+            background-color: #050714;
+            color: #F8F9FF;
+            background-image: url('data:image/svg+xml,%3Csvg xmlns="http://www.w3.org/2000/svg" width="100" height="100" opacity="0.05"%3E%3Ccircle cx="50" cy="50" r="1" fill="%23FFFFFF"/%3E%3C/svg%3E');
+            background-size: 50px 50px;
+        }
+        .glass-panel {
+            background: rgba(36, 40, 66, 0.8);
+            backdrop-filter: blur(12px);
+            -webkit-backdrop-filter: blur(12px);
+            border: 1px solid rgba(248, 249, 255, 0.1);
+        }
+        .glow-effect {
+            box-shadow: inset 0 0 20px rgba(255, 219, 60, 0.1);
+        }
+        .starlight-border {
+            border: 1px solid rgba(248, 249, 255, 0.1);
+        }
+        .text-gradient {
+            background-clip: text;
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-image: linear-gradient(to right, #c1c1fc, #ffdb3c);
+        }
+        .scrollbar-hide::-webkit-scrollbar {
+            display: none;
+        }
+        .scrollbar-hide {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        .text-shadow {
+            text-shadow: 0 2px 4px rgba(0,0,0,0.8);
+        }
+        /* Animations */
+        .fade-in-up {
+            opacity: 0;
+            transform: translateY(20px);
+            animation: fadeInUp 0.6s ease-out forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .delay-100 { animation-delay: 100ms; }
+        .delay-200 { animation-delay: 200ms; }
+        .delay-300 { animation-delay: 300ms; }
+    </style>
+</head>
+<body class="font-body-md text-body-md overflow-x-hidden">
+<!-- SideNavBar -->
+<nav class="hidden md:flex flex-col gap-unit py-margin-desktop bg-surface-container dark:bg-surface-container w-[280px] h-screen fixed left-0 top-0 bg-surface-container/80 backdrop-blur-xl border-r border-starlight-white/10 shadow-none z-50 fade-in-up">
+<div class="px-6 mb-8">
+<h1 class="font-headline-lg text-headline-lg font-bold text-starlight-white">星河启明</h1>
+<p class="font-label-md text-label-md text-nebula-gray mt-1">AI 天文助教</p>
+</div>
+<ul class="flex flex-col gap-2 px-4">
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-nebula-gray font-medium hover:text-lunar-glow hover:bg-surface-container-high transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="dashboard">dashboard</span>
+<span>总览</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-nebula-gray font-medium hover:text-lunar-glow hover:bg-surface-container-high transition-all duration-300" href="#">
+<span class="material-symbols-outlined" data-icon="wb_sunny">wb_sunny</span>
+<span>日月交辉</span>
+</a>
+</li>
+<li>
+<a class="flex items-center gap-4 px-4 py-3 rounded-lg text-secondary-container font-bold border-l-4 border-secondary-container bg-primary-container/30 shadow-[0_0_15px_rgba(255,219,60,0.3)] scale-[0.98] animate-pulse-slow" href="#">
+<span class="material-symbols-outlined" data-icon="auto_awesome" data-weight="fill" style="font-variation-settings: 'FILL' 1;">auto_awesome</span>
+<span>星河入梦</span>
+</a>
+</li>
+</ul>
+</nav>
+<!-- TopAppBar -->
+<header class="hidden md:flex justify-between items-center px-gutter w-full fixed top-0 right-0 left-[280px] h-20 bg-transparent bg-surface/50 backdrop-blur-md border-b border-starlight-white/10 z-40 transition-all duration-200 ease-in-out fade-in-up">
+<div class="font-headline-md text-headline-md font-bold text-starlight-white">星河入梦</div>
+<div class="flex items-center gap-6">
+<div class="flex gap-4 font-label-md text-label-md text-starlight-white">
+<span>当前进度: 猎户座巡礼</span>
+<span class="text-nebula-gray">|</span>
+<span>教学班级: 乡村希望小学三班</span>
+</div>
+<div class="flex items-center gap-4">
+<!-- AI Assistant Toggle Button -->
+<button class="text-tertiary hover:text-solar-flare transition-colors p-2 rounded-full hover:bg-surface-container-high bg-surface-container-low border border-tertiary/30 shadow-[0_0_10px_rgba(164,201,255,0.2)]" id="toggle-assistant" title="智能助教">
+<span class="material-symbols-outlined" data-icon="smart_toy">smart_toy</span>
+</button>
+<button class="text-nebula-gray hover:text-solar-flare transition-colors p-2 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+</button>
+<button class="text-nebula-gray hover:text-solar-flare transition-colors p-2 rounded-full hover:bg-surface-container-high">
+<span class="material-symbols-outlined" data-icon="settings">settings</span>
+</button>
+<img alt="Teacher Avatar" class="w-10 h-10 rounded-full border border-starlight-white/20" data-alt="A professional yet warm avatar of a digital AI teacher. The character has a futuristic but friendly aesthetic, glowing slightly with soft blue and gold tones against a dark space-themed background. The lighting highlights a sense of cosmic wisdom and approachable educational authority, set in a modern circular portrait format." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDYY0BEOVOCtLpSEXFqp8Wy4yYnn_zXR-vIDLOXzAUI7MpUzyi4J5LMBFaY7ierxPC2MXmSW4nwEsw0kKxtcr_5mrCchwr-7Zc4JJQEi7Q9-sy4ajtugMLNyG26iPOdvw7--wzFAoKmJlJm5ZahikySY3HTO2SHZqDUsPFwBUmamUNPEBhtRBix-6OZVB_IK_X8w5A2jztRQ5aD_QAcGihlC7rNmil_X12VD6H_lAYFmLjpapiAht0X"/>
+</div>
+</div>
+</header>
+<!-- Main Content Area -->
+<main class="ml-[280px] pt-24 pr-6 pl-6 pb-6 min-h-screen transition-all duration-300" id="main-content">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-6">
+<!-- Immersive Star Map -->
+<section class="lg:col-span-2 glass-panel rounded-xl overflow-hidden relative min-h-[500px] border-solar-flare/30 glow-effect fade-in-up delay-100">
+<div class="absolute inset-0 z-0">
+<img class="w-full h-full object-cover opacity-80" data-alt="A breathtaking, highly detailed digital illustration of a cosmic star map blending ancient Chinese astronomy with modern sci-fi aesthetics. The map features glowing golden constellations, ethereal nebula clouds in deep indigo and astro blue, and intricate geometric overlays representing celestial coordinates. The scene is illuminated by soft, otherworldly starlight, evoking a sense of ancient wisdom meeting futuristic technology." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAEq0vPHWGJeDX6kKERmpMu6ixG1xNHautR-EMU2PeMI0ga8DmL5lcvLxp5EwpYAqc3zjhfPzcXwKMUyCGrzUnoTutggUbrS15UJI51gzqJiy6TKeleEQhxcYUob41I20HIpYRP8O5ZKuYhEI7G76xDOuPr6pxciST7VzxNOSFkJW_BT7A6Zd_yPHKAVCkD05Inr5Q5chN6nCcXBVLhH__oeWi-xC02tpdlt-ntR7Ns3VS_LQ9V1FxS"/>
+</div>
+<div class="relative z-10 p-6 flex flex-col h-full">
+<h2 class="font-headline-md text-headline-md text-starlight-white mb-2">三垣二十八宿星图</h2>
+<p class="font-body-md text-body-md text-nebula-gray mb-4">点击星宿查看对应神话背景与科学数据</p>
+<div class="flex-grow flex items-center justify-center">
+<div class="text-center p-8 bg-surface-container-highest/60 backdrop-blur-md rounded-lg border border-solar-flare/30 shadow-[0_0_20px_rgba(255,165,0,0.15)] shadow-[0_0_30px_rgba(255,165,0,0.25)]">
+<span class="material-symbols-outlined text-4xl text-solar-flare mb-3" data-icon="explore">explore</span>
+<h3 class="font-headline-md text-headline-md text-secondary-container mb-2">角宿 (Spica)</h3>
+<p class="font-body-md text-body-md text-starlight-white/80 max-w-md">东方苍龙七宿之首。在现代天文学中对应室女座α星，距离地球约250光年，是一颗明亮的蓝巨星双星系统。</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Poetry Input -->
+<section class="glass-panel rounded-xl p-6 starlight-border flex flex-col glow-effect fade-in-up delay-200">
+<h3 class="font-headline-md text-headline-md text-starlight-white mb-4 flex items-center gap-2">
+<span class="material-symbols-outlined text-primary" data-icon="edit_note">edit_note</span>
+                    诗词意象生成
+                </h3>
+<p class="font-body-md text-body-md text-nebula-gray mb-6">输入包含天文元素的古诗词，AI 将为您生成专属星空意象。</p>
+<div class="mb-6">
+<label class="block font-label-md text-label-md text-primary mb-2">诗词片段</label>
+<textarea class="w-full bg-deep-void border border-starlight-white/20 rounded-lg p-4 text-starlight-white focus:border-solar-flare focus:ring-1 focus:ring-solar-flare focus:outline-none transition-all resize-none h-32" placeholder="例如：纤云弄巧，飞星传恨...">纤云弄巧，飞星传恨，银汉迢迢暗度。</textarea>
+</div>
+<button class="mt-auto bg-primary-container text-starlight-white border border-primary/50 hover:bg-primary hover:text-on-primary font-label-md text-label-md py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2 shadow-[0_0_15px_rgba(193,193,252,0.2)]">
+<span class="material-symbols-outlined" data-icon="auto_fix_high">auto_fix_high</span>
+                    开始生成意象
+                </button>
+</section>
+<!-- Postcard Preview -->
+<section class="glass-panel rounded-xl p-6 starlight-border flex flex-col justify-between fade-in-up delay-300">
+<div class="flex justify-between items-start mb-4">
+<h3 class="font-headline-md text-headline-md text-starlight-white flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary-container" data-icon="photo_library">photo_library</span>
+                        星空明信片预览
+                    </h3>
+<button class="text-nebula-gray hover:text-starlight-white transition-colors" title="下载打印">
+<span class="material-symbols-outlined" data-icon="download">download</span>
+</button>
+</div>
+<div class="relative w-full aspect-[4/3] rounded-lg overflow-hidden border border-secondary-container/50 shadow-[0_0_25px_rgba(255,219,60,0.1)] bg-surface-container-lowest flex items-center justify-center">
+<img class="absolute inset-0 w-full h-full object-cover" data-alt="A vintage-style postcard design merging traditional Chinese aesthetic elements with celestial astronomical motifs. The postcard features a dark indigo starry night sky backdrop, accented with shimmering golden star clusters representing the Milky Way (Silver River). Elegant vertical Chinese calligraphy graces the left side, while the borders are detailed with gold-stamped ornate geometric patterns, creating a poetic, elegant, and atmospheric scene." src="https://lh3.googleusercontent.com/aida-public/AB6AXuC6LDQUOORtg0iqtNoGkw2g8rz0WXeqhK5m9EqKtqRwlr9xOnLRqS08ExGpC7Og5WoG3Zr76RO2jftZuI-y84c88hrebJzE6FzTv1fS6GYOvBGkVysYt3Hr7AnrK7HqgNmPl2b73YUQGIdleCaWxn1iGl7MUhxCSQ_MDcqCpFdE3Ueawm2wHnznIJDlU_J6hRMJb8IQamn08HQxpNLrLNiE6VQeVreyAZx6iaVNvmo9mRmsJOIlyom1"/>
+<div class="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-deep-void to-transparent">
+<p class="font-headline-md text-headline-md text-starlight-white tracking-widest text-shadow">飞星传恨 · 银汉迢迢</p>
+</div>
+</div>
+<button class="mt-6 w-full bg-secondary-container text-on-secondary-container hover:bg-secondary-fixed hover:text-on-secondary-fixed-variant font-label-md text-label-md py-3 px-6 rounded-lg transition-all flex items-center justify-center gap-2 font-bold shadow-[0_0_20px_rgba(255,219,60,0.4)]">
+<span class="material-symbols-outlined" data-icon="print">print</span>
+                    一键导出打印
+                </button>
+</section>
+</div>
+</main>
+<!-- Backdrop overlay for sidebar -->
+<div class="fixed inset-0 bg-deep-void/40 backdrop-blur-sm z-40 hidden transition-opacity duration-300 opacity-0" id="sidebar-backdrop"></div>
+<!-- AI Assistant Sidebar -->
+<aside class="fixed right-0 top-0 bottom-0 w-[320px] bg-surface-container-low/95 backdrop-blur-2xl border-l border-starlight-white/10 shadow-2xl shadow-deep-void/50 flex flex-col p-6 z-50 transform translate-x-full transition-transform duration-300 ease-in-out" id="ai-sidebar">
+<div class="flex items-center justify-between mb-6 pb-4 border-b border-starlight-white/10">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-full bg-tertiary-container flex items-center justify-center border border-tertiary/30">
+<span class="material-symbols-outlined text-tertiary" data-icon="smart_toy">smart_toy</span>
+</div>
+<div>
+<h2 class="font-headline-md text-headline-md text-starlight-white text-sm">智能助教</h2>
+<p class="font-label-md text-label-md text-solar-flare text-xs animate-pulse">正在分析星象数据...</p>
+</div>
+</div>
+<button class="text-nebula-gray hover:text-starlight-white transition-colors" id="close-assistant">
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+<div class="flex-grow overflow-y-auto flex flex-col gap-4 pr-2 scrollbar-hide">
+<div class="bg-surface-container rounded-lg p-3 border border-starlight-white/5 self-start max-w-[85%]">
+<p class="font-body-md text-body-md text-nebula-gray text-sm">已检测到诗词输入：“纤云弄巧，飞星传恨”。</p>
+</div>
+<div class="bg-surface-container-high rounded-lg p-3 border border-tertiary/20 self-start max-w-[90%] shadow-[0_0_10px_rgba(164,201,255,0.1)]">
+<p class="font-body-md text-body-md text-starlight-white text-sm mb-2">
+<strong class="text-tertiary">意象解析：</strong><br/>
+                    “飞星”在古代天文学中指流星或特定的吉星。这里结合“银汉”，特指牛郎织女星跨越银河的传说。
+                </p>
+<p class="font-body-md text-body-md text-starlight-white text-sm">
+                    即将在右侧明信片为您融合<span class="text-secondary-container">天鹰座（牛郎）</span>与<span class="text-secondary-container">天琴座（织女）</span>的现代星图坐标。
+                </p>
+</div>
+</div>
+<div class="mt-4 pt-4 border-t border-starlight-white/10">
+<div class="relative">
+<input class="w-full bg-deep-void border border-starlight-white/20 rounded-full py-2 pl-4 pr-10 text-sm text-starlight-white focus:border-tertiary focus:outline-none placeholder:text-nebula-gray/50" placeholder="向 AI 助教提问..." type="text"/>
+<button class="absolute right-2 top-1/2 -translate-y-1/2 text-tertiary hover:text-solar-flare transition-colors">
+<span class="material-symbols-outlined text-lg" data-icon="send">send</span>
+</button>
+</div>
+</div>
+</aside>
+<script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const toggleBtn = document.getElementById('toggle-assistant');
+        const closeBtn = document.getElementById('close-assistant');
+        const sidebar = document.getElementById('ai-sidebar');
+        const backdrop = document.getElementById('sidebar-backdrop');
+        const mainContent = document.getElementById('main-content');
+
+        function openSidebar() {
+            sidebar.classList.remove('translate-x-full');
+            backdrop.classList.remove('hidden');
+            // Small delay to allow display:block to apply before opacity transition
+            setTimeout(() => {
+                backdrop.classList.remove('opacity-0');
+            }, 10);
+        }
+
+        function closeSidebar() {
+            sidebar.classList.add('translate-x-full');
+            backdrop.classList.add('opacity-0');
+            setTimeout(() => {
+                backdrop.classList.add('hidden');
+            }, 300); // Wait for transition
+        }
+
+        toggleBtn.addEventListener('click', openSidebar);
+        closeBtn.addEventListener('click', closeSidebar);
+        backdrop.addEventListener('click', closeSidebar);
+    });
+</script>
+</body></html>
